@@ -5,13 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--사용자가 익스플로러를 이용하면 최신 버전인 엣지로 화면을 보여주는 기능-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--디바이스 종류별로 화면에 출력할 방식을 지정, viewport가 있어야 반응형 웹 페이지를 제작할 때 모바일 화면에 결과물을 출력할 수 있다.-->
         <title>Document</title> <!--'title'태그 사이에 작성한 내용은 웹 브라우저의 상단 탭에 표시된다.-->
+        <link rel="stylesheet" href="css/style.css"> <!--css 파일 연결-->
     </head>
     <body> <!--웹 브라우저에 내용을 출력하는 공간-->
         <header> <!--상단 콘텐츠를 나타내는 태그-->
             <nav></nav> <!--메뉴를 그룹화하는 태그-->
         </header>
         
-        <div>
+        <div class="header123456">
             <!--제목을 지정하는 태그 숫자가 클수록 중요도가 낮아진다.-->
             <h1>제목1</h1>
             <h2>제목2</h2>
@@ -21,10 +22,10 @@
             <h6>제목6</h6>
         </div>
         
-        <div> <!--콘텐츠를 그룹화하는 태그, 이 태그를 사용해서 그룹화하거나 화면을 분할함-->
+        <div class="text1"> <!--콘텐츠를 그룹화하는 태그, 이 태그를 사용해서 그룹화하거나 화면을 분할함-->
             <h1>Lorem ipsum dolor sit amet.</h1>
             <p>문단 지정하기</p> <!--문단을 지정하는 태그--> 
-            <p>
+            <p id="txt">
                 <strong>Lorem</strong> ipsum <em>dolor</em> sit amet consectetur, adipisicing elit. Tempora, alias!
             </p> <!--lorem+숫자 매크로로 테스트 문장 작성이 가능하다.-->            
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit temporibus repudiandae accusantium. Vitae provident corporis beatae et, tempore mollitia porro maiores fuga, earum, nihil itaque saepe consequuntur odio aut at!</p>
@@ -32,8 +33,8 @@
         <!--'string' 강조할 문장, 'em' 기울일 문장 : 단순히 보이는 것 뿐 아니라 웹 접근성의 관점에서 단어를 좀 더 강한 억양으로 읽어준다.-->
         <br/>
 
-        <div>
-            <span> <!--인라인 요소 태그 그룹화하기. ex) strong, em, a-->
+        <div id="div">
+            <span id="span"> <!--인라인 요소 태그 그룹화하기. ex) strong, em, a-->
                 <a href="http://www.naver.com" target="blank">네이버</a> <!--웹 페이지에 링크 연결하는 'a'태그, target속성으로 새로운 탭으로 이동 가능-->
             </span>
             <br/>
@@ -56,7 +57,7 @@
         </div>
         <br/>
             
-        <div>
+        <div class="list1">
             <!--순서가 없는 목록 만들기 : 순서가 바뀌어도 상관없는 목록에 사용한다.-->
             <ul>
                 <!--'ul'태그를 사용할 때는 자식 태그인 'li'태그를 꼭 같이 써야한다.-->
@@ -67,7 +68,7 @@
             <br/>
         </div>
 
-        <div>
+        <div class="list2">
             <!--순서가 있는 목록 만들기 : 시험 성적 순위, 번호 등과 같이 순서가 중요할 때 사용하는 목록-->
             <h2>A반 시험 석차</h2>
             <ol>
@@ -271,13 +272,53 @@
         <br/>
 
         </div>
-        <section> <!--콘탠츠 여러 개를 그룹화하는 태그-->
-            <article></article> <!--개별 콘텐츠를 지정하는 태그-->
-            <article></article>
-            <article></article>
-            <article></article>
-        </section>
+            <section> <!--콘탠츠 여러 개를 그룹화하는 태그-->
+                <article></article> <!--개별 콘텐츠를 지정하는 태그-->
+                <article></article>
+                <article></article>
+                <article></article>
+            </section>
         <div>
+        <br/>
+
+
+        <div>
+            <article>
+                <h1>TITLE</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <a href="#">view</a>
+            </article>
+        </div>
+        <br/>
+
+
+        <div class="divP1234">
+            <p class="p1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum veniam tempore ducimus reiciendis alias laboriosam dolore iusto illo magni officiis asperiores soluta, quidem nemo eveniet aliquam nihil cupiditate quia excepturi.
+            </p>
+
+            <p class="p2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum veniam tempore ducimus reiciendis alias laboriosam dolore iusto illo magni officiis asperiores soluta, quidem nemo eveniet aliquam nihil cupiditate quia excepturi.
+            </p>
+
+            <p class="p3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum veniam tempore ducimus reiciendis alias laboriosam dolore iusto illo magni officiis asperiores soluta, quidem nemo eveniet aliquam nihil cupiditate quia excepturi.
+            </p>
+
+            <p class="p4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum veniam tempore ducimus reiciendis alias laboriosam dolore iusto illo magni officiis asperiores soluta, quidem nemo eveniet aliquam nihil cupiditate quia excepturi.
+            </p>
+        </div>
+        <br/>
+
+
+        <div>
+            <ul class="ul1">
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+            </ul>
+        </div>
         <br/>
 
         <!--하단 콘텐츠를 나타내는 'footer'태그-->

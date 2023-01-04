@@ -1,0 +1,306 @@
+@charset "utf-8"; /* 웹 문서에서 한글을 지원한다는 인코딩 방식을 의미한다. */
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap'); /* 구글 폰트 웹 사이트 폰트 inport */
+
+/* CSS로 HTML 요소 다양하게 선택하기 */
+/* CSS 선택할 HTML 요소를 선택자로 지정하고 이 요소의 바꿀 속성명에 속성값을 대입하면 된다. */
+/*
+h1 {
+    color: red;
+}
+*/
+
+/* 전체 선택자 - 모든 HTML 요소를 한꺼번에 선택하기 */
+/*
+* { 
+    border: 1px solid wheat;
+}
+*/
+/* 모든 HTML 요소의 테두리를 1px 굵기의 하얀색 실선으로 적용하라는 의미 */
+
+/* 태그 선택자 - 태그명을 이용하여 선택하기 */
+/* 태그 선택자는 HTML 파일의 특정 태그 요소를 선택하여 사용할 수 있다. */
+h1 {
+    border: 1px solid red;
+}
+
+h2 {
+    border: 1px solid green;
+}
+
+h3 {
+    border: 1px solid blue;
+}
+
+/* 자손 선택자 - 자식과 하위 요소를 모두 선택하기 */
+/* 자손 선택자는 특정 HTML 요소의 자식 요소를 포함하여 그 하위에 있는 모든 요소를 선택하여 CSS를 지정할 수 있다. */
+p strong {
+    /*p 태그의 자식태그 strong의 하위에 모든 요소에 css를 지정*/
+    border: 1px solid skyblue;
+}
+
+/* 자식 선택자 - 직계 자식 요소만 선택하기 */
+/* 자식 선택자는 특정 HTML 요소의 직계 자식 요소를 선택하여 사용한다. 자식 선택자를 사용하는 방법은 부모와 자식 선택자 사이에 '>' 기호를 삽입해 주면 된다. */
+ul > li {
+    border: 1px solid blue;
+}
+
+/* 그룹 선택자 - 여러 개의 요소를 그룹으로 선택하기 */
+/* 같은 CSS를 사용하는 HTML 요소가 여러 개 있다면 그룹 선택자로 묶어서 쓸 수 있다. */
+h1, h2, h3 {
+    border: 1px solid blue;
+}
+
+/* 순서 선택자 - 형제 요소의 순서를 이용하여 선택하기 */
+/* 순서 선택자는 HTML 요소의 순서를 이용하여 필요한 요소만 선택할 수 있다. */
+ul li:nth-of-type(1) {
+    border: 1px solid red;
+}
+
+ul li:nth-of-type(2) {
+    border: 1px solid green;
+}
+
+ul li:nth-of-type(3) {
+    border: 1px solid blue;
+}
+
+ul li:nth-of-type(4) {
+    border: 1px solid violet;
+}
+
+/* 수열 선택자 - 수식을 이용하여 선택하기 */
+/* 배수 또는 특정한 규칙에 따라 요소를 선택한다. */
+/* 2의 배수인 li요소를 모두 선택하라는 의미 */
+ul li:nth-of-type(2n) {
+    border: 1px solid blue;
+}
+
+/* 마지막 요소 선택자 - 형제 요소 중 마지막 요소를 선택하기 */
+/* 특정 태그의 마지막 요소만 선택한다. */
+ul li:last-child {
+    border: 1px solid blue;
+}
+
+/* 홀수, 짝수 선택자 - 홀수 또는 짝수 요소를 선택하기 */
+/* 수열 선택자보다 쉽게 홀수, 짝수 요소를 선택하는 방법 */
+ol li:nth-of-type(odd) {
+    border: 1px solid blue;
+}
+
+ol li:nth-of-type(even) {
+    border: 1px solid red;
+}
+
+/* 속성 선택자 - 속성값을 이용하여 선택하기 */
+/* HTML 요소의 속성을 선택하여 스타일을 적용할 수 있다. */
+/* CSS 파일에서 속성 선택자로 사용하려면 대괄호를 이용하여 속성값을 작성하고 각각 파란색, 빨간색 테두리로 설정한다. */
+input[type="text"] {
+    border: 1px solid blue;
+}
+
+input[type="password"] {
+    border: 1px solid red;
+}
+
+/* 가상 선택자 - 가상의 요소를 선택하기 */
+/* 실제 HTML 요소가 아닌 가상의 요소를 선택하는 방법 */
+h1 {
+    border: 1px solid blue;
+}
+/* :hover는 선택한 요소 위에 마우스 포인터를 올렸을 때 스타일을 적용하라는 의미이다. */
+h1:hover {
+    border: 1px solid red;
+}
+
+/* 가상 선택자인 :before, :after를 사용해서 HTML 파일이아닌 CSS에서 가상의 콘텐츠로 나타내기 */
+/* F12를 이용해 크롬 개발자 도구로 보면 HTML파일에 입력하지 않는 ::before와 ::after라는 가상의 요소가 생성되어 있다. */
+/* ::before, ::after도 된다. 하지만 :hover는 :를 하나만 입력해야 한다. */
+h2:before {
+    content: "before content";
+    color: blue;
+}
+h2:after {
+    content: "after content";
+    color: red;
+}
+
+/* 클래스 선택자 - 클래스명으로 요소를 선택하기 */
+/* 만약 같은 태그가 여러 개 있을 때 각각 다른 효과를 주고 싶다면 태그마다 class를 붙여서 사용하면 된다. */
+/* 클래스 선택자는 일반적으로 가장 많이 사용된다. */
+/* HTML에서 class=클래스명으로 클래스 선택자를 만든다. */
+/* 그 뒤 CSS에서 태그명.클래스명과 같이 쓴다. 이때 태그명은 생략할 수 있다. */
+div.header123456 {
+    border: 1px solid fuchsia;
+}
+
+.text1 {
+    border: 1px solid darkblue;
+}
+
+/* 아이디 선택자 - 아이디명으로 요소를 선택하기 */
+/* 클래스 선택자와 마찬가지로 아이디 선택자를 이용하여 HTML 요소를 선택할 수 있다. */
+/* 클래스 선택자는 단순히 CSS의 스타일링을 위해 태그에 이름을 붙이지만, 아이디 선택자는 태그에 고유한 이름을 붙여 특정 기능을 개발하기 위해 사용한다. */
+/* 아이디는 고유한 값이므로 같은 아이디를 여러 개 지정할 수 없다. - 주로 HTML의 구조를 나누는 시맨틱 태그에서 사용한다. */
+/* 웹 페이지에서 중요한 영역마다 고유 id값을 넣으면 추후 개발자가 해당 요소를 쉽게 탐색할 수 있다. */
+/* CSS에서 #을 앞에 붙여서 아이디 선택자를 사용한다. */
+#div {
+    border: 1px solid red;
+}
+
+#span {
+    border: 1px solid violet;
+}
+
+
+
+/* 폰트 스타일링하기 */
+
+/* 폰트 굵기 바꾸기 */
+/* font-weight 속성을 사용해 폰트의 굵기를 간단하게 변경할 수 있다. */
+/* font-weight 속성은 normal, bold가 있다. */
+h1 {
+    font-weight: normal;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+/* 폰트 크기 바꾸기 */
+/* 웹 페이지는 픽셀로 구성되므로 px이라는 기본 단위를 사용한다. */
+/* 폰트 크기도 px단위를 주로 쓰지만 가끔 rem이나 em 단위를 사용하기도 한다. */
+/* 폰트 크기를 조정할 때는 font-size 속성을 사용한다. */
+/* font-size 속성은 px(픽셀 단위로 폰트 크기를 설정), rem(최상위 부모인<html>태그를 기준으로 폰트 크기를 설정), em(부모 요소를 기준으로 폰트 크기를 설정)이 있다. */
+article h1 {
+    font-size: 60px;
+}
+
+article p {
+    font-size: 30px;
+}
+
+article a {
+    font-size: 15px;
+}
+
+/* rem 단위로 바꾸는 예제 */
+/* html에서 기준이 될 폰트 크기를 설정 */
+html {
+    font-size: 10px;
+}
+
+/* h1 제목 폰트 크기를 html 요소 기준으로 3배 키우라는 뜻 */
+article h1 {
+    font-size: 3rem;
+}
+
+article p {
+    font-size: 1rem;
+}
+
+/* 본문 폰트 크기를 기준으로 링크 폰트는 0.8배로 설정 */
+article a {
+    font-size: 0.8rem;
+}
+
+/* em 단위는 실무에서 거의 쓰지 않는다. */
+
+/* 폰트 모양 바꾸기 */
+/* font-family 속성을 사용하면 폰트 모양을 다양하게 바꿀 수 있다. */
+ul li {
+    font-size: 40px;
+}
+
+ul li:nth-of-type(1) {
+    font-family: "돋움";
+}
+
+ul li:nth-of-type(2) {
+    font-family: "굴림";
+}
+
+ul li:nth-of-type(3) {
+    font-family: arial;
+}
+
+div p {
+    font-family: serif;
+}
+
+/* 구글 웹 폰트 사용하기 */
+/* fonts.google.com에서 웹 폰트 코드와 그 아래의 font-family 코드 복사해서 사용 */
+p#txt {
+    font-size: 20px;
+    font-family: 'Monoton', cursive;
+}
+
+/* 폰트 색상 바꾸기 */
+/* 폰트 색상은 color 속성을 사용해서 지정할 수 있다. */
+/* color의 속성값은 다음과 같다, 영문명[영어 색상 명으로 표기], #000000[16진수로 표기], rgb(0, 0, 0)[RGB로 표기] */
+li:nth-of-type(1) {
+    color: red;
+}
+li:nth-of-type(2) {
+    color: #fff000;
+}
+li:nth-of-type(3) {
+    color: rgb(0,255,0);
+}
+
+/* 텍스트 줄 간격 바꾸기 */
+/* 텍스트의 줄 간격은 line-height 속성을 이용해서 바꿀 수 있다. */
+/* font-size는 텍스트 자체의 높잇값을 의미하지만 line-height는 줄 간격 전체 높잇값을 나타낸다. */
+/* line-height 속성은 다음과 같다, 실숫값(줄 간격을 폰트 크기에 맞추어 실수 배율로 지정한다.), 픽셀값(줄 간격을 고정된 px 단위로 지정한다.) */
+.list1 {
+    font-size: 20px;
+    line-height: 40px;
+    border: 1px solid red;
+}
+
+/* line-height를 실숫값 1.5로 지정한다. */
+.list2 {
+    font-size: 20px;
+    line-height: 1.5;
+    border: 1px solid blue;
+}
+
+/* 텍스트 정렬 방향 지정하기 */
+div.divP1234 {
+    font-size: 20px;
+    border: 1px solid blue;
+}
+
+.divP1234 p:nth-of-type(1) {
+    text-align: left;
+}
+
+.divP1234 p:nth-of-type(2) {
+    text-align: center;
+}
+
+.divP1234 p:nth-of-type(3) {
+    text-align: right;
+}
+
+.divP1234 p:nth-of-type(4) {
+    text-align: justify;
+}
+
+/* 텍스트 자간 지정하기 */
+/* 자간은 px 단위를 사용해서 설정한다. */
+.ul1 li:nth-of-type(1) {
+    letter-spacing: 0px;
+}
+
+.ul1 li:nth-of-type(2) {
+    letter-spacing: 2px;
+}
+
+.ul1 li:nth-of-type(3) {
+    letter-spacing: -6px;
+}
+
+
+/* 웹 페이지에서 영역별 크기 정하기 */
+/* HTML 태그의 영역별 크기와 바깥쪽, 안쪽 여백을 지정하는 방법 */
+/* 하지만 블록 요소와 인라인 요소 때문에 모든 태그의 영역과 여백 크기를 지정할 수는 없다. */
