@@ -496,5 +496,559 @@ div.borderEx2 div:nth-of-type(1) {
 3. 인라인 태그를 사용한 텍스트의 크기가 해당 요소의 크기가 된다.
 4. 인라인 요소만 묶을 수 있다.
  */
+div.block-inline p {
+    border: 1px solid red;
+    height: 100px;
+}
 
- 
+div.block-inline strong, div.block-inline em {
+    border: 1px solid blue;
+    height: 50px;
+}
+
+/* 인라인 요소에 너빗값과 높잇값을 강제로 지정하기 */
+div.block-inline2 p {
+    border: 1px solid red;
+    height: 100px;
+}
+
+div.block-inline2 strong, div.block-inline2 em {
+    border: 1px solid blue;
+    height: 50px;
+    display: inline-block;
+}
+
+
+/* 인라인 요소 태그를 블록 요소로 강제 변환하기 */
+div.block-inline3 p {
+    border: 1px solid red;
+    height: 100px;
+}
+
+div.block-inline3 strong, div.block-inline3 em {
+    border: 1px solid blue;
+    height: 50px;
+    display: block;
+}
+
+
+/* 웹 페이지의 배경 꾸미기 */
+/* 웹 페이지에도 태그 영역마다 배경색과 이미지를 넣을 수 있다. */
+
+/* 배경색 지정하기 */
+/* background-color 속성을 사용해서 태그에 배경색을 직접 지정할 수 있다. */
+/* 폰트 색상을 바꿀 때처럼 영어 색상명을 사용하거나 RGB, 16진수 표기법으로 지정할 수 있다. */
+/* 속성은 다음과 같다. 영문명(배경색을 영어 색상명으로 지정한다.), rgb(0,0,0)(배경색을 RGB 표기법으로 지정한다.), #000000(배경색을 16진수 표기법으로 지정한다.) */
+div.back-groundEx1 li { color: #000; }
+div.back-groundEx1 li:nth-of-type(1) { background-color: #000; }
+div.back-groundEx1 li:nth-of-type(2) { background-color: #111; }
+div.back-groundEx1 li:nth-of-type(3) { background-color: #222; }
+div.back-groundEx1 li:nth-of-type(4) { background-color: #333; }
+div.back-groundEx1 li:nth-of-type(5) { background-color: #444; }
+div.back-groundEx1 li:nth-of-type(6) { background-color: #555; }
+div.back-groundEx1 li:nth-of-type(7) { background-color: #666; }
+div.back-groundEx1 li:nth-of-type(8) { background-color: #777; }
+div.back-groundEx1 li:nth-of-type(9) { background-color: #888; }
+div.back-groundEx1 li:nth-of-type(10) { background-color: #999; }
+div.back-groundEx1 li:nth-of-type(11) { background-color: #aaa; }
+div.back-groundEx1 li:nth-of-type(12) { background-color: #bbb; }
+div.back-groundEx1 li:nth-of-type(13) { background-color: #ccc; }
+div.back-groundEx1 li:nth-of-type(14) { background-color: #ddd; }
+div.back-groundEx1 li:nth-of-type(15) { background-color: #eee; }
+div.back-groundEx1 li:nth-of-type(16) { background-color: #fff; }
+
+
+/* 배경 이미지 삽입하기 */
+/* 배경 이미지를 삽입할 때는 속성값을 여러 개 같이 지정해야 한다. */
+div.back-groundEx2 section {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    background-image: url(../img/pattern.png);
+}
+/* 이미지 반복하지 않음 */
+div.back-groundEx3 section {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    background-image: url(../img/pattern.png);
+    background-repeat: no-repeat;
+}
+/* 가로축으로만 이미지 반복 */
+div.back-groundEx4 section {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    background-image: url(../img/pattern.png);
+    background-repeat: repeat-x;
+}
+/* 세로축으로만 이미지 반복 */
+div.back-groundEx5 section {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    background-image: url(../img/pattern.png);
+    background-repeat: repeat-y;
+}
+/* 이미지를 중앙에 배치 */
+div.back-groundEx6 section {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    background-image: url(../img/pattern.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/* 이미지를 우측 하단에 배치 */
+div.back-groundEx7 section {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    background-image: url(../img/pattern.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+/* 이미지를 왼쪽으로 20px, 세로로 60px만큼 이동 배치 */
+div.back-groundEx8 section {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    background-image: url(../img/pattern.png);
+    background-repeat: no-repeat;
+    background-position: 20px 60px;
+}
+/* 이미지를 백분율로 배치 */
+div.back-groundEx9 section {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    background-image: url(../img/pattern.png);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+}
+
+
+/* 배경 이미지 크기 조절하기 */
+div.back-groundEx10 section {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #000;
+    background-image: url(../img/rose.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+
+/* 배경 이미지 크기 조절하기 - 여백 없이 채우기 */
+div.back-groundEx11 section {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #000;
+    background-image: url(../img/rose.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+/* 실습 : 두 배경 이미지를 웹 브라우저에 고정하기 */
+div.fix-back-ground-img section {
+    width: 90vw;
+    height: 90vh;
+    margin: 4vh auto;
+    border: 1px solid #000;
+}
+
+div.fix-back-ground-img section article {
+    width: 100%;
+    height: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /* 배경 이미지가 물리적으로 어떤 태그에 종속되어 있든지 상관없이 무조건 웹 브라우저를 기준으로 고정된다. */
+}
+
+div.fix-back-ground-img section article:nth-of-type(1) {
+    background-image: url(../img/car1.jpg);
+}
+
+div.fix-back-ground-img section article:nth-of-type(2) {
+    background-image: url(../img/car2.jpg);
+}
+
+/* 웹 페이지의 레이아웃 구성하기 */
+/* 블록 요소 태그를 이용해서 CSS로 웹 페이지의 레이아웃을 만들 수 있다. */
+
+/* CSS 초기화하기 */
+/* article에 설정된 기본 여백을 0으로 초기화한다. */
+div.css-clearEx1 * {
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+}
+
+div.css-clearEx1 ul, div.css-clearEx1 ol {
+    list-style: none;
+}
+
+div.css-clearEx1 a {
+    text-decoration: none;
+}
+
+div.css-clearEx1 article {
+    border: 1px solid red;
+}
+
+div.css-clearEx1 ul li {
+    border: 1px solid blue;
+}
+
+
+/* float - 블록 요소 좌우로 배치하기 */
+/* 블록 요소는 화면의 레이아웃을 배치 할 때 사용하는데, 자동 줄 바꿈을 하는 특징 때문에 한 줄에 하나의 블록 요소마 넣을 수 있다. */
+/* float를 사용하면 강제로 블록 요소를 좌우로 배치한다. */
+/* 속성값은 다음과 같다, left(요소를 띄워서 왼쪽에 배치한다.), right(요소를 띄워서 오른쪽에 배치한다.) */
+div.floatEx1 div.wrap {
+    width: 800px;
+    margin: 100px auto;
+    border: 5px solid black;
+}
+
+div.floatEx1 div.wrap .left{
+    width: 400px;
+    height: 400px;
+    background-color: pink;
+}
+
+div.floatEx1 div.wrap .right {
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+}
+
+/* section요소가 좌우로 배치됐지만 부모 요소인 .wrap이 자식 요소의 높잇값을 인식하지 못해 테두리를 제대로 감싸지 못헀다. */
+/* 이처럼 float 속성을 이용해서 블록 요소를 강제로 띄우면 부모 요소는 float 속성이 적용된 요소의 높잇값을 인식할 수 없다. */
+div.floatEx2::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+div.floatEx2 div.wrap {
+    width: 800px;
+    margin: 100px auto;
+    border: 5px solid black;
+}
+
+div.floatEx2 div.wrap .left{
+    width: 400px;
+    height: 400px;
+    background-color: pink;
+    float: left;
+}
+
+div.floatEx2 div.wrap .right {
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+    float: left;
+}
+
+
+div.floatEx3 div.wrap {
+    width: 800px;
+    margin: 100px auto;
+    border: 5px solid black;
+}
+/* 가상 선택자 after를 생성(실제로 없는 마지막 박스를 만든다.)하고 content는 빈 문자를 삽입한 뒤 block 속성으로 강제 변경한다. */
+/* 그 뒤 clear: both를 적용하면 부모 요소에 float의 영향을 해제해서 높잇값을 제대로 인식할 수 있다. */
+/* clear: both - float한 박스들의 바로 아래 박스에게 주변을 흐르지 않고 원래대로 배치하도록 하는 속성, 이 요소는 block이어야 한다. */
+div.floatEx3 div.wrap::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+div.floatEx3 div.wrap .left{
+    width: 400px;
+    height: 400px;
+    background-color: pink;
+    float: left;
+}
+
+div.floatEx3 div.wrap .right {
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+    float: left;
+}
+
+
+/* position - 요소를 자유롭게 배치하기 */
+/* position 속성을 이용하면 여러 요소를 순서와 상고나없이 화면에 가로세로 좌푯값을 직접 설정해서 자유롭게 배치할 수 있다. */
+/* 앞에서 배운 float가 큰 영역의 덩어리를 좌우로 배치하는 역할을 한다면, position은 특정 영역 안에서 위치 조절을 더욱 자유롭게 할 수 있다. */
+/* 속성값은 다음과 같다, relative(적용된 요소의 현재 위칫값을 기준으로 상대 위치를 지정한다.), absolute(부모 요소의 특정 구간을 기준으로 절대 위치를 지정한다.), fixed(웹 브라우저를 기준으로 절대 위치를 지정한다.) */
+
+/* 공통된 section 요소의 너빗값을 600px, 높잇값을 200px로 설정한다. */
+div.positionEx1 section {
+    width: 600px;
+    height: 200px;
+}
+
+div.positionEx1 section:nth-of-type(1) {
+    background-color: pink;
+}
+/* 그리고 2번째 section 요소만 position: relative로 설정하고 좌푯값을 입력한다. */
+div.positionEx1 section:nth-of-type(2) {
+    background-color: lightblue;
+    position: relative;
+    top: -100px;
+    left: 100px;
+}
+
+
+/* absolute 속성값 사용하기 */
+.positionEx2 .wrap {
+    width: 800px;
+    border: 5px solid black;
+    margin: 50px auto;
+}
+
+.positionEx2 .wrap::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.positionEx2 .wrap .left {
+    width: 400px;
+    height: 400px;
+    background-color: lightgreen;
+    float: left;
+}
+
+.positionEx2 .wrap .right {
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+    float: left;
+}
+
+.positionEx2 .wrap .right .box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.positionEx2 .wrap .bottom {
+    width: 800px;
+    height: 100px;
+    background-color: pink;
+    float: left;
+}
+
+/* absolute 속성값 사용하기 2 */
+.positionEx3 .wrap {
+    width: 800px;
+    border: 5px solid black;
+    margin: 50px auto;
+}
+
+.positionEx3 .wrap::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.positionEx3 .wrap .left {
+    width: 400px;
+    height: 400px;
+    background-color: lightgreen;
+    float: left;
+}
+
+.positionEx3 .wrap .right {
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+    float: left;
+    /* position: absolute는 부모 요소 중 position을 적용한 요소로 좌푯값의 기준점을 정한다. */
+    /* 여기서는 right 요소에 position: relative를 적용해서 좌푯값의 기준점을 body가 아닌 right 기준으로 설정해준다. */
+    /* position: relative는 자식 요소의 좌푯값 기준을 설정할 때 주로 쓰인다. */
+    position: relative;
+}
+
+.positionEx3 .wrap .right .box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+}
+
+.positionEx3 .wrap .bottom {
+    width: 800px;
+    height: 100px;
+    background-color: pink;
+    float: left;
+}
+
+
+/* position: fixed 속성은 무조건 웹 브라우저를 기준으로 좌푯값이 고정된다. */
+.positionEx4 section {
+    /* CSS에서는 공통의 section 요소를 width: 100%; height: 100vh;로 지정하여 각 section의 크기를 웹 브라우저 전체 크기와 똑같이 입력한다. */
+    width: 100%;
+    height: 100vh;
+}
+
+.positionEx4 section article {
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    /* position: fixed; */ /* 일단 잠깐 꺼둠 */
+    bottom: 50px;
+    right: 50px;
+}
+
+.positionEx4 section:nth-of-type(1) {
+    background-color: orange;
+}
+
+.positionEx4 section:nth-of-type(2) {
+    background-color: lightblue;
+}
+
+.positionEx4 section:nth-of-type(3) {
+    background-color: pink;
+}
+
+
+
+/* object-fit - 콘텐츠를 특정 영역에 채우기 */
+/* object-fit 속성을 사용하면 부모 요소 영역에서 자식 요소로 지정한 이미지, 동영상 같은 콘텐츠의 비율을 설정할 수 있다. */
+/* 속성값은 다음과 같다, fill(요소의 비율을 무시하고 가득 채운다.), cover(요소의 비율을 유지하면서 여백 없이 가득 채운다.), contain(요소의 비율을 유지하면서 콘텐츠가 잘리지 않게 가득 채운다.) */
+.ob-fitEx1::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.ob-fitEx1 div {
+    /* div요소는 정사각형으로 지정 */
+    width: 360px;
+    height: 360px;
+    border: 1px solid #000;
+    float: left;
+    margin: 50px;
+}
+
+.ob-fitEx1 div img {
+    /* div요소 안의 이미지는 너비와 높이를 100%로 지정한다. */
+    width: 100%;
+    height: 100%;
+}
+/* fill(요소의 비율을 무시하고 가득 채운다.) */
+.ob-fitEx1 .box1 img {
+    object-fit: fill;
+}
+/* cover(요소의 비율을 유지하면서 여백 없이 가득 채운다.) */
+.ob-fitEx1 .box2 img {
+    object-fit: cover;
+}
+/* contain(요소의 비율을 유지하면서 콘텐츠가 잘리지 않게 가득 채운다.) */
+.ob-fitEx1 .box3 img {
+    object-fit: contain;
+}
+
+
+/* z-index - 겹쳐 있는 요소의 z축 순서 지정하기 */
+/* z-index를 이용하면 겹친 요소의 z축 순서를 강제로 지정해 줄 수 있다. */
+/* 속성값 : 순섯값(요소에 z축의 순서를 지정한다. 값이 큰 요소가 위로 올라간다.) */
+.z-indexEx1 .wrap {
+    width: 400px;
+    height: 400px;
+    border: 1px solid #000;
+    margin: 100px auto;
+    position: relative;
+}
+/* 이 경우에는 먼저 작성한 파란색 박스가 아래로 */
+.z-indexEx1 .wrap .left {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+/* 나중에 작성한 빨간색 박스가 위로 올라간다. */
+.z-indexEx1 .wrap .right {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+}
+
+/* .left 요소를 위로 올리기 */
+.z-indexEx2 .wrap {
+    width: 400px;
+    height: 400px;
+    border: 1px solid #000;
+    margin: 100px auto;
+    position: relative;
+}
+
+.z-indexEx2 .wrap .left {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 2;
+}
+
+.z-indexEx2 .wrap .right {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    z-index: 1;
+}
+
+
+/* opacity - 요소의 투명도 설정하기 */
+/* 특정 요소에 opacity 속성을 사용해서 투명에서 불투명까지 단계별로 투명도를 지정할 수 있다. */
+/* 속성값은 0~1이다. */
+.opacityEx1 .wrap {
+    width: 400px;
+    height: 400px;
+    border: 1px solid #000;
+    margin: 100px auto;
+    position: relative;
+}
+
+.opacityEx1 .wrap .left {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.opacityEx1 .wrap .right {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    opacity: 0.5;
+}
+
+/* 다양한 그래픽 효과 적용하기 */
