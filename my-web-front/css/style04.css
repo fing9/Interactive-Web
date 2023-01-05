@@ -286,7 +286,7 @@
     stroke-dasharray: 1420;
     /* stroke-dashoffset: 0; */
 
-    animation: drawline 5s linear 0s infinite;
+    animation: drawline 5s ease-in-out 0s infinite;
 }
 
 @keyframes drawline {
@@ -297,3 +297,39 @@
         stroke-dashoffset: 0;
     }
 }
+
+
+/* 화면 너비에 따라 웹 페이지 디자인 변경하기 */
+/* CSS3의 기능 가운데 미디어 쿼리를 사용하면 현재 사용자가 보는 웹 브라우저의 너비를 판단하여 CSS를 다르게 설정할 수 있다. */
+/* 이런 기법을 "반응형 웹"이라고 한다. */
+/* 예전에는 같은 웹 페이지를 PC용, 모바일용으로 각각 따로 제작해야 했는데, 지금은 CSS3의 미디어 쿼리를 이용해 웹 페이지를 한 번만 제작하면 된다. */
+
+/* 실습 : 미디어 쿼리를 사용하여 배경색 바꾸기 */
+/* 1단계 : HTML, CSS 파일 만들기 */
+.mediaEx1 div{
+    width: 200px;
+    height: 200px;
+    background: pink;
+    margin: 100px auto;
+}
+
+.mediaEx1 article {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .mediaEx1 article {
+        background: orange;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .mediaEx1 article {
+        background: aqua;
+    }
+}
+
+
+/* 05장 flex 방식으로 레이아웃 만들기 */
+/* flex 방식을 사용하면 float 속성보다 훨씬 편리하게 화면의 레이아웃을 만들 수 있다. */
