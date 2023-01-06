@@ -160,21 +160,90 @@ btnRight.addEventListener("click", (e)=>{
 // 실무에서는 특정 HTML 요소의 스타일을 자바스크립트로 직접 변경하는 방법을 추천하지 않는다.
 // 그 이유는 자바스크립트 특정 요소의 스타일을 변경하면 CSS 파일의 스타일 구문을 바꾸지 않고 HTML에 인라인 스타일을 직접 적용하므로 CSS 파일에 등록한 우선순위가 무시되기 때문이다.
 // 그렇기 때문에 CSS 파일에서 특정 클래스 이름에 따라 스타일이 설정되게 하고, 자바스크립트에서는 클래스 이름만 추가,제거하는 방법으로 스타일을 변경해보자.
-// const wrap = document.querySelector(".jsClassControlEx1 #jsClassControlEx1wrap");
-// const ctlBox = wrap.querySelector("article");
-// var nowColor = {
-//     color: ctlBox.style.backgroundColor
-// };
-
-// console.log(nowColor.color);
+const wrap = document.querySelector(".jsClassControlEx1 #jsClassControlEx1wrap");
+const ctlBox = wrap.querySelector("article");
 
 // wrap.addEventListener("click", ()=>{
-//     if (nowColor.color == "aqua") {
-//         ctlBox.style.backgroundColor = "hotpink";
-//         nowColor.color = "hotpink";
-//     }
-//     else if (nowColor == "hotpink") {
-//         ctlBox.style.backgroundColor = "apua";
-//         nowColor.color = "aqua";
-//     }
+//     ctlBox.style.backgroundColor = "hotpink";
 // });
+
+wrap.addEventListener("click", ()=>{
+    // 부모 요소인 section#wrap 에만 클래스 on이 추가되어 CSS 파일에 미리 설정한 배경색이 적용된 것을 볼 수 있다.
+    let isOn = wrap.classList.contains("on"); // wrap의 classLis에 on이 있는지 여부를 확인 한다.
+    console.log(isOn);
+
+    if(isOn) {
+        wrap.classList.remove("on");
+    }
+    else {
+        wrap.classList.add("on");
+    }
+});
+
+
+
+// 함수를 활용하여 코드 패키징하기
+// 함수 정의 및 호출로 기능 재활용하기
+function plus(num1, num2) {
+    console.log(num1 + num2);
+}
+
+plus(1, 2);
+
+
+// 실습 : 활성화 기능 함수 정의하고 사용하기
+const btns = document.querySelectorAll(".activeEx1 .btns li");
+const boxs = document.querySelectorAll(".activeEx1 section article");
+
+function activation(index, list) {
+    for(let el of list) {
+        el.classList.remove("on");
+    }
+
+    list[index].classList.add("on");
+}
+
+// 버튼의 개수만큼 반복하며 클릭 이벤트 연결
+for(let i=0; i<btns.length; i++) {
+
+    // 각 버튼을 클릭할 때마다
+    btns[i].addEventListener("click", (e)=>{
+        // 각 인수로 순섯값과 버튼, 박스 그룹을 넣어서
+        // activation 함수 호출
+        activation(i, btns);
+        activation(i, boxs);
+    });
+}
+
+
+
+// HTML 요소의 속성값 제어하기
+// HTML 요소에는 태그의 src, alt, href 같은 다양한 속성값이 결합되어 있다.
+// 자바스크립트를 이용해서 HTML 요소마다 속성값을 알아내서 변경해보자.
+const link2 = document.querySelector(".valEx1 a");
+const link_href = link2.getAttribute("href");
+console.log(link_href);
+
+
+// 속성값 변경하기
+const link3 = document.querySelector(".valEx1 a");
+const new_href = "https://www.nate.com";
+link3.setAttribute("href", new_href);
+
+
+// 자바스크립트로 사용자 브라우저 판단하기
+// 모든 브라우저에는 navigator라는 객체가 있는데, 이 객체 안의 userAgent에는 브라우저의 정봇값이 문자 형태로 저장되어 있다.
+// 따라서 현재 작업하는 파일이 웹 브라우저로 출력되면 콘솔 창에는 그 브라우저의 정보를 출력할 수 있다.
+const ver = navigator.userAgent;
+console.log(ver);
+
+// 크롬, 엣지, 웨일 브라우저에는 비슷한 정보가 공통으로 들어 있는데 그 이유는 모두 같은 브라우저 엔진을 사용하기 때문이다.
+// 크롬에서 화면이 제대로 동작하면 나머지 브라우저 2개에서도 같은 화면을 출력한다는 의미이다.
+const isIE = /trident/i.test(ver); // 익스폴로러 브라우저에는 앞의 3브라우저에는 없는 trident가 있다. 이 정보를 탐색해서 IE로 구분한다.
+// /와 /사이에는 탐색할 문자를 넣고 test(ver) 구문을 연결해서 탐색할 문잣값이 ver에 저장된 브라우저의 정봇값에 포함되어 있는지를 찾는다.
+// 뒤에 붙은 i는 알파벳 대소 문자를 구분하지 않고 탐색할 문자열을 검사하겠다는 의미이다.
+console.log(isIE);
+
+if(isIE) {
+    alert("익스플로러 브라우저로 접속하셨습니다.\n 이 웹페이지는 익스플로러를 지원하지 않습니다. 다른 브라우저로 접속해 주세요.");
+}
