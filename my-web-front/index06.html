@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScriptEx</title>
+        <link rel="stylesheet" href="css/style06.css">
+        <!-- script 태그 안에 작성되는 코드는 자바 스크립트 코드로 작동한다. -->
+        <!-- <script>
+            const title = document.querySelector("#title"); // id값이 '#title'인 요소를 title 변수에 임시로 저장하라.
+            console.log(title); // 하지만 여기서는 아직 #title이 id인 태그를 읽지 못했으므로 아무 것도 출력되지 않는다.
+        </script> -->
+        <!-- <script src="custom.js"></script> -->
+        <!-- defer 속성을 붙이면 외부 자바스크립트 파일을 호출할 때 웹 브라우저의 자바스크립트 해석기가 <body>를 해석하면서 동시에 외부 자바스크립트 파일을 가져온다. 그리고 웹 브라우저 <body> 영역의 내용이 모두 출력되면 외부 스크립트 파일을 실행한다. -->
+        <script defer src="custom.js"></script>
+    </head>
+    <body>
+        <h1 id="title">HELLO WORLD</h1>
+        <!-- 여기로 JS의 호출 위치를 바꾸면 #title 요소가 제대로 출력된다. -->
+        <!-- <script>
+            const title = document.querySelector("#title"); // id값이 '#title'인 요소를 title 변수에 임시로 저장하라.
+            console.log(title);
+        </script> -->
+        <!-- 간단한 코드는 HTML 안에 자바 스크립트를 바로 넣어서 연결할 수 있다. -->
+        <!-- 하지만 코드가 길고 복잡하다면 전용 스크립트 파일을 따로 만들어 HTML 파일에 링크로 연결하는 것이 좋다. -->
+
+
+        <section id='wrap'>
+            <article class="box1">TEXT1</article>
+            <article class="box2">TEXT2</article>
+            <article class="box3">TEXT3</article>
+        </section>
+
+        
+        <div id='ex1'>
+            <ul class="list">
+                <li class="item1">item1</li>
+                <li class="item2">item2</li>
+                <li class="item3">item3</li>
+                <li class="item4">item4</li>
+            </ul>
+        </div>
+
+
+        <div id="closestPrentEx1">
+            <main>
+                <section>
+                    <article>
+                        <ul>
+                            <li>list</li>
+                        </ul>
+                    </article>
+                </section>
+            </main>
+        </div>
+
+
+        <div class="ex2">
+            <article id="box"></article>
+        </div>
+
+
+        <div class="clickEx1">
+            <a href="http://www.naver.com">click</a>
+        </div>
+
+        
+        <div class="hoverEx1">
+            <div id="hoverBox"></div>
+        </div>
+
+
+        <div class="repeatEx1">
+            <ul class="list">
+                <li><a href="#">item1</a></li>
+                <li><a href="#">item2</a></li>
+                <li><a href="#">item3</a></li>
+                <li><a href="#">item4</a></li>
+        </div>
+
+
+        <div class="plusMinusEx1">
+            <a href="#" class="btnPlus">plus</a>
+            <a href="#" class="btnMinus">minus</a>
+        </div>
+
+
+        <div class="rotateBox">
+            <a href="#" class="btnLeft">왼쪽으로 회전</a>
+            <a href="#" class="btnRight">오른쪽으로 회전</a>
+
+            <div id="roBox"></div>
+        </div>
+
+
+        <div class="jsClassControlEx1">
+            <section id="jsClassControlEx1wrap">
+                <article></article>
+            </section>
+        </div>
+    </body>
+</html>
